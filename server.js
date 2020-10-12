@@ -54,7 +54,6 @@ io.on("connection", (client) => {
 
   const handleEndGame = (boxes) => {
     const remainingBoxes = boxes.filter((el) => el.owner === 0);
-    console.log(remainingBoxes.length);
     if (remainingBoxes.length) return false;
     return calculateResult(boxes);
   };
